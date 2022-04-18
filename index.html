@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claculadora con JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h2>Calculadora Simple con JS</h2>
+    <br>
+    </div>
+    
+    <!--Contendra las funciones de calculadora-->
+    <div id="calculadora">
+        <!--Aqui se vera el resultado-->
+        <div class="pantallaResuld">
+            <input type="text" readonly size="20" id="resultado" name="resultado">
+        </div>
+
+        <!--Contendra las operaciones -->
+        <table class="operaciones">
+            <tr>
+                <td colspan="2">
+                    <button class="btncol2" value ="^" onclick="realizaOperacion('**')" >^</button>
+                </td>
+                <td>
+                    <button class="operar" value ="/" onclick="realizaOperacion(this.value)">/</button>
+            
+                </td>
+                <td>
+                    <button class="operar" value ="*" onclick="realizaOperacion(this.value)">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(7)">7</button>
+                    
+                </td>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(8)">8</button>
+                    
+                </td>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(9)" >9</button>
+                    
+                </td>
+                <td>
+                    <button class="operar" value ="-" onclick="realizaOperacion(this.value)">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnNumerico"  onclick="addNum(4)">4</button>
+            
+                </td>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(5)" >5</button>
+                    
+                </td>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(6)">6</button>
+                    
+                </td>
+                <td>
+                    <button class="operar" value ="+" onclick="realizaOperacion(this.value)">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(1)">1</button>
+                    
+                </td>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(2)" >2</button>
+                    
+                </td>
+                <td>
+                    <button class="btnNumerico" onclick="addNum(3)">3</button>
+                    
+                </td>
+                <td>
+                    <button class="operar" value ="      =       " onclick="mostrarResultado()">=</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="btncol2" onclick="addNum(0)" >0</button>
+                </td>
+                <td>
+                    <button id="punto" class="operar" value="." onclick="addNum(this.value)">.</button>
+                    
+                </td>
+                <td>
+                    <button id="limpiar" class="operar" onclick="limpiar()">C</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
